@@ -145,11 +145,11 @@ console.log(emp)
 console.log(emp.register())
 
 // Generics
-function getArray(items:any[]): any{
+function getArray<T>(items:T[]): T[]{
     return new Array().concat(items)
 }
-let numArray = getArray([1,2,3,4])
-let strArray = getArray(["chn","chn2","chn3"])
+let numArray = getArray<number>([1,2,3,4])
+let strArray = getArray<string>(["chn","chn2","chn3"])
 
-numArray.push('hello')
-numArray.push('hello')
+numArray.push(12)
+strArray.push('hello')
